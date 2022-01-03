@@ -10,7 +10,7 @@ function App() {
   const dispatch = useDispatch();
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
-    fetch('/contacts')
+    fetch('/contacts/')
     .then((res) => res.json())
     .then((data) => { dispatch(loadContacts(data)); console.log(data)})
   });
