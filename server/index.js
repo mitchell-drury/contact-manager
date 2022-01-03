@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bp = require('body-parser');
-const port = process.env.port || 3001;
+const port = process.env.PORT || 3001;
 const app = express();
 const db = require('./db/dbsetup.js');
 const Contact = require('./db/models/contact.js');
