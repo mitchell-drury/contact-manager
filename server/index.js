@@ -11,6 +11,7 @@ app.use(bp.json());
 app.use(bp.urlencoded({extended: true}));
 
 app.get('/contacts', (req, res) => {
+    console.log('fetching all');
     Contact.findAll({
         order: ['lastName']
     })

@@ -11,8 +11,8 @@ function App() {
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
     fetch('/contacts')
-      .then((res) => res.json())
-      .then((data) => { dispatch(loadContacts(data)); console.log(data)})
+    .then((res) => res.json())
+    .then((data) => { dispatch(loadContacts(data)); console.log(data)})
   });
 
   return (
