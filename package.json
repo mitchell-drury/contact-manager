@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon server/index.js",
-    "start": "node server/index.js && ./client react-scripts start",
+    "start": "node server/index.js",
+    "heroku-postbuild": "cd client && npm run start",
     "seed": "./server/db/seed.js"
   },
   "keywords": [],
