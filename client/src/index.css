@@ -1,0 +1,96 @@
+body {
+  width: 95%;
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hide{
+  display: none;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+#searchAddGroup{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#addContact{
+  flex: 2 1 58%;
+}
+#searchContact{
+  flex: 1 1 38%;
+}
+
+#searchContactBox{
+  width: calc(100% - 26px);
+}
+
+.inputGroup{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inputGroup input{
+  width: 33%;
+  min-width:100px;
+}
+
+input[type=submit]{
+  width: 100%;
+  background-color: #04AA6D;
+  color:white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+input[type=submit]:hover{
+  cursor:pointer;
+  background-color: #038153;
+}
+
+#contactList {
+  border-collapse: collapse;
+  margin:auto;
+  width: 100%;
+}
+
+#contactList td, #contactList th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#contactList tr:nth-child(even){background-color: #f2f2f2;}
+
+#contactList tr:hover {background-color: #ddd;}
+
+#contactList th {
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+#contactList td {
+  padding: 0px;
+}
+#contactList input {
+  color: black;
+  width: calc(100% - 24px);
+  border-width: 0px;
+}
+
+.editContact {
+  cursor: pointer;
+}
