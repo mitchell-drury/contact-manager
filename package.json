@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon server/index.js",
     "start": "node server/index.js",
-    "heroku-postbuild": "cd client && npm run start",
+    "build": "cd client/ && npm install && npm run build",
     "seed": "./server/db/seed.js"
   },
   "keywords": [],
