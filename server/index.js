@@ -12,11 +12,11 @@ app.use(bp.urlencoded({extended: true}));
 
 app.get('/contacts', (req, res) => {
     console.log('fetching all');
-    res.json([{'firstName': 'mitch'}])
-    // Contact.findAll({
-    //     order: ['lastName']
-    // })
-    // .then(contacts => {res.json(contacts)});
+    //res.json([{'firstName': 'mitch'}])
+    Contact.findAll({
+        order: ['lastName']
+    })
+    .then(contacts => {res.json(contacts)});
 })
 app.post('/contacts/add', (req, res) => {
     Contact.create(req.body)
