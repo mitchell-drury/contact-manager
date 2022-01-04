@@ -47,7 +47,7 @@ app.post('/contacts/update', (req, res) => {
     })
 })
 
-db.sync({force:false});
+db.sync({force:true});
 app.listen(port, () => {
     console.log(`server up ${port}`);
 })
