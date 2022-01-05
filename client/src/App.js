@@ -14,7 +14,7 @@ function App() {
       method: 'GET'
     })
     .then((res) => res.json())
-    .then((data) => { dispatch(loadContacts(data)); console.log(data)})
+    .then((data) => { dispatch(loadContacts(data)); console.log('contacts fetched: ', data)})
   });
 
   return (

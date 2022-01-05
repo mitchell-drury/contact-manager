@@ -11,14 +11,13 @@ app.use(bp.json());
 app.use(bp.urlencoded({extended: true}));
 
 app.get('/contacts', (req, res) => {
-    console.log('fetching all');
-    //res.json([{'firstName': 'mitch'}])
     Contact.findAll({
         order: ['lastName']
     })
-    .then(contacts => {res.json(contacts)});
+    .then(contacts => {console.log('server result: ', contacts); res.json(contacts)});
 })
 app.post('/contacts/add', (req, res) => {
+    console.log('adding');
     Contact.create(req.body)
         .then((contact) => {
             if (contact.dataValues.createdAt) {
