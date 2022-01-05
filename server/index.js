@@ -45,6 +45,9 @@ app.post('/contacts/update', (req, res) => {
         }
     })
 })
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+})
 
 db.sync({force:true});
 app.listen(port, () => {

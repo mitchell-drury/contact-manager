@@ -33,7 +33,7 @@ function ContactRow(props) {
                 if (res.status === 200) {
                     return res.json()
                 } else {
-                    throw 'Contact not updated';
+                    throw new Error('Contact not updated');
                 }
             })
             .then((data) => {

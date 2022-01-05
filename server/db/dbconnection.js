@@ -13,7 +13,7 @@ if (process.env.PORT) {
   })
 } else {
   db = new Sequelize('postgres://localhost:5432/reactCalendar', {
-    "logging": console.log
+    logging: false
   })
 }
 

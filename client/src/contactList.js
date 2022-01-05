@@ -7,6 +7,7 @@ function ContactList() {
         if (!contact.hidden) {
             return <ContactRow contact={contact} index={index} key={String(contact.id)}/>    
         }
+        return null;
     })
     return (
         <div>
