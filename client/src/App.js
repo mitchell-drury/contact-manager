@@ -9,13 +9,13 @@ import SearchContacts from './SearchContacts';
 function App() {
   const dispatch = useDispatch();
   const [contacts, setContacts] = useState([]);
-  useEffect(() => {
-    fetch('/contacts/', {
-      method: 'GET'
-    })
-    .then((res) => res.json())
-    .then((data) => { dispatch(loadContacts(data)); console.log('contacts fetched: ', data)})
-  });
+  // useEffect(() => {
+  //   fetch('/contacts/', {
+  //     method: 'GET'
+  //   })
+  //   .then((res) => res.json())
+  //   .then((data) => { dispatch(loadContacts(data)); console.log('contacts fetched: ', data)})
+  // });
 
   return (
     <div className="App">
