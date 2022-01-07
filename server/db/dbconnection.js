@@ -4,8 +4,8 @@ let db;
 if (process.env.PORT) {
   db = new Sequelize(process.env.DATABASE_URL, {
     "dialect": "postgres",
-    "username": "menqpalmeargts",
-    "password": "d7a9def64c6083e35faaa5affeeb5239a200069d9c8d8f032936decbe529c9de",
+    "username": "srwmuzmcicvztg",
+    "password": "def11a6ce1ec4174a9189c3c477265dce26086949a7fa9edaf847319538b4f89",
     "dialectOptions": {
       "ssl": "ssl"
     },
