@@ -11,7 +11,8 @@ if (process.env.PORT) {
         "require": true,
         "rejectUnauthorized": false
       }
-    }
+    },
+    "ssl": true
   })
 } else {
   db = new Sequelize('postgres://localhost:5432/reactCalendar', {
