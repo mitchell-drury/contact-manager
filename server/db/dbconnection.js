@@ -7,9 +7,11 @@ if (process.env.PORT) {
     "username": "srwmuzmcicvztg",
     "password": "def11a6ce1ec4174a9189c3c477265dce26086949a7fa9edaf847319538b4f89",
     "dialectOptions": {
-      "ssl": "ssl"
-    },
-    "ssl": "ssl"
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   })
 } else {
   db = new Sequelize('postgres://localhost:5432/reactCalendar', {
