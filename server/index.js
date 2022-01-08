@@ -14,10 +14,9 @@ app.get('/contacts', (req, res) => {
     Contact.findAll({
         order: ['lastName']
     })
-    .then(contacts => {console.log('server result: ', contacts); res.json(contacts)});
+    .then(contacts => {res.json(contacts)});
 })
 app.post('/contacts/add', (req, res) => {
-    console.log('adding');
     Contact.create(req.body)
         .then((contact) => {
             if (contact.dataValues.createdAt) {
