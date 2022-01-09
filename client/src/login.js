@@ -1,6 +1,11 @@
 function Login () {
     return (
-        <div> Login Page </div>
+        <div>
+            
+            <input name='email'></input>
+            <input name='password'></input>
+        
+        </div>
     )
 }
 

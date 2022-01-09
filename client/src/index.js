@@ -12,7 +12,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login />} />
-        <Route path='/contacts' element={<ContactPage />} />
+        <Route path='contacts' element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   </Provider>,
