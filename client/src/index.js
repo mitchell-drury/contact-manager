@@ -9,7 +9,7 @@ import Login from './login';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename='/'>
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='contacts' element={<ContactPage />} />
