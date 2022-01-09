@@ -1,6 +1,5 @@
 const express = require('express');
 const contactsRouter = express.Router();
-const db = require('./db/dbsetup.js');
 const Contact = require('./db/models/contact.js');
 
 contactsRouter.get('/', (req, res) => {

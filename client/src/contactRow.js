@@ -37,10 +37,9 @@ function ContactRow(props) {
                 }
             })
             .then((data) => {
-                console.log(data)
                 dispatch(updateContact({
                     'contact': updatedContact,
-                    index: props.index
+                    'index': props.index
                 }));
                 setDisabled(true);
             })

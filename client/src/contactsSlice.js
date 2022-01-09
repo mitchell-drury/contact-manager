@@ -28,10 +28,13 @@ export const contactsSlice = createSlice({
             //update the contact
             state.contacts[action.payload.index] = action.payload.contact;
             
+            //remove the edited contact from the list
             let updated = state.contacts.splice(action.payload.index, 1)[0];
             let i = 0;
+            //insert the edited contact back in to the list in alphabetic order
             do{
-                if(i === state.contacts.length-1 || state.contacts.length === 0) {
+                //because contact was removed, it's possible contact list is length 0 now
+                if(state.contacts.length === 0) {
                     state.contacts.push(updated);
                     break;                
                 }                
@@ -39,7 +42,11 @@ export const contactsSlice = createSlice({
                     state.contacts.splice(i, 0, updated);
                     break;
                 }
-
+                //important to have this check after the local compare
+                if(i === state.contacts.length-1) {
+                    state.contacts.push(updated);
+                    break;                
+                } 
                 i++;
             } while(i < state.contacts.length);           
         },
