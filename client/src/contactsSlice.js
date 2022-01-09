@@ -31,14 +31,15 @@ export const contactsSlice = createSlice({
             let updated = state.contacts.splice(action.payload.index, 1)[0];
             let i = 0;
             do{
+                if(i === state.contacts.length-1 || state.contacts.length === 0) {
+                    state.contacts.push(updated);
+                    break;                
+                }                
                 if (state.contacts[i].lastName.localeCompare(updated.lastName, 'en') > 0) {
                     state.contacts.splice(i, 0, updated);
                     break;
                 }
-                if(i === state.contacts.length-1) {
-                    state.contacts.push(updated);
-                    break;                
-                }
+
                 i++;
             } while(i < state.contacts.length);           
         },

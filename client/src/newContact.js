@@ -17,7 +17,7 @@ function NewContact () {
             'phoneNumber': event.target.phoneNumber.value
         }
 
-        fetch('/contacts/add', {
+        fetch('api/contacts/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

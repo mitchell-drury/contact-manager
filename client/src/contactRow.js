@@ -22,7 +22,7 @@ function ContactRow(props) {
                 'phoneNumber': phoneNumber.current.value,
                 'id': props.contact.id
             }
-            fetch('/contacts/update', {
+            fetch('api/contacts/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
